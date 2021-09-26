@@ -22,7 +22,7 @@ const Footer = () => {
             </section> */}
         <footer className="ftco-footer">
                 <div className="container">
-                    <div className="row mb-5 justify-content-between">
+                    <div className="row justify-content-between">
                         <div className="col-sm-12 col-md-4">
                             <div className="ftco-footer-widget mb-4">
                                 <h2 className="ftco-heading-2 logo"><a href="/">DevOps Mechanics</a></h2>
@@ -46,7 +46,7 @@ const Footer = () => {
                             </div>
                         </div> */}
                         <div className="col-sm-12 col-md-4">
-                            <div className="ftco-footer-widget mb-4">
+                            <div className="ftco-footer-widget mb-0">
                                 <h2 className="ftco-heading-2">Have a Question?</h2>
                                 <div className="block-23 mb-3">
                                     <ul>

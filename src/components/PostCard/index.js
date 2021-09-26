@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import parseDate from "../../utils/parse-date"
 
 const PostCard = ({post}) => {
@@ -10,7 +11,7 @@ const PostCard = ({post}) => {
                             <span class="fa fa-calendar mr-2"></span>{post.publishDate && parseDate(post.publishDate)}
                             <span class="fa fa-user mr-2"></span>{post.author.status}
                         </p>
-                        <h2 class="mb-4"><a href="blog-single.html">{post.title}</a></h2>
+                        <h2 class="mb-4"><Link to={`/posts/${post.id}`}>{post.title}</Link></h2>
                         <div class="icon d-flex align-items-center">
                             <div class="img" style={{"background-image":`url(http://localhost:8000${post.author.image.src})`}}></div>
                             <div class="position pl-3">
