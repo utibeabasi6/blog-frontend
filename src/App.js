@@ -1,7 +1,7 @@
 import Homepage from "./pages/Homepage";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import BlogDetailPage from "./pages/PostDetailPage";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import PostsPage from "./pages/PostsPage";
 
