@@ -13,7 +13,7 @@ const Hero = () => {
                         </div>
                         <div className="col-md-4">
                             <div className="author">
-                                <div className="img" style={{"backgroundImage":"url(/images/profilepic.jpg)"}}></div>
+                                <div className="img" style={{"backgroundImage":"url(./images/profilepic.jpg)"}}></div>
                                 <div className="text">
                                     <h3>Utibeabasi Umanah</h3>
                                     <p>A DevOps engineer currently learning more about the cloud, automation and DevSecOps.</p>
