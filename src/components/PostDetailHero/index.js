@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
-const BlogDetailHero = () => {
+const PostDetailHero = () => {
     return (
-        <section class="hero-wrap hero-wrap-2">
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center">
-                <div class="col-md-9 text-center ftco-animate fadeInUp ftco-animated pt-5">
-                    <h1 class="mb-3 bread">My Blog</h1>
-                    <p class="breadcrumbs"><span class="mr-2"><Link to="/">Home <i class="fa fa-chevron-right"></i></Link></span> <span class="mr-2"><Link to="/posts">Blog <i class="fa fa-chevron-right"></i></Link></span> <span>Blog Details<i class="fa fa-chevron-right"></i></span></p>
+        <section className="hero-wrap hero-wrap-2">
+        <div className="container">
+            <div className="row no-gutters slider-text align-items-center justify-content-center">
+                <div className="col-md-9 text-center ftco-animate fadeInUp ftco-animated pt-5">
+                    <h1 className="mb-3 bread">My Blog</h1>
+                    <p className="breadcrumbs"><span className="mr-2"><Link to="/">Home <i className="fa fa-chevron-right"></i></Link></span> <span className="mr-2"><Link to="/posts">Blog <i className="fa fa-chevron-right"></i></Link></span> <span>Blog Details<i className="fa fa-chevron-right"></i></span></p>
                 </div>
             </div>
         </div>
@@ -15,4 +15,4 @@ const BlogDetailHero = () => {
     )
 }
 
-export default BlogDetailHero;
+export default PostDetailHero;

@@ -1,39 +1,28 @@
+import { useEffect, useState } from "react";
 import PostCard from "../../components/PostCard";
-import { gql, useQuery } from "@apollo/client";
 import PostHero from "../../components/PostHero";
+import { getPosts } from "../../utils/api";
 
-const ALL_POSTS = gql`
-    query {
-        allPosts{
-            title
-            id
-            author{
-                name
-                image{
-                    src
-                }
-                status
-                role
-            }
-            coverImage{
-                src
-            }
-            publishDate
-            commentsCount
-        }
-    }
-`
 const PostsPage = () => {
-    const { loading, error, data } = useQuery(ALL_POSTS)
-
+    let [response, setResponse] = useState({});
+    useEffect(() => {
+        let posts, error;
+        getPosts().then(result => {
+            posts = result.posts
+            setResponse({ posts, error })
+        }).catch(err => {
+            error = err
+            setResponse({ posts, error })
+        });
+    }, [])
     return (<>
     <PostHero/>
-            <section class="ftco-section">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                {loading && <h1>Loading</h1>}
-                {error && <h1>Error</h1>}
-            {data && data.allPosts.map((post) => <PostCard post={post}/>)}
+            <section className="ftco-section">
+        <div className="container-fluid">
+            <div className="row justify-content-center">
+                {!response.posts && !response.error && <h1>Loading</h1>}
+                {response.error && <h1>Error</h1>}
+            {response.posts && response.posts.map((post, index) => <PostCard key={index}  post={post}/>)}
             </div></div></section>
     </>)
 }
